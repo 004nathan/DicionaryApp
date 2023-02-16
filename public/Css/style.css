@@ -232,6 +232,9 @@ li::before {
     width: 1em;
     margin-left: -1em;
   }
+  li{
+    list-style: none;
+  }
 .emojiDiv{
   font-size:5vh;
 }

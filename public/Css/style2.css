@@ -255,6 +255,9 @@ li::before {
     width: 1em;
     margin-left: -1em;
   }
+  li{
+    list-style: none;
+  }
 .font{
     font-size:1.5vh;
 }
