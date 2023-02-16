@@ -224,6 +224,14 @@ cursor: pointer;
    flex-direction: column;
    margin-top: 15vh;
 }
+li::before {
+    content: "\2022";
+    color:#A445ED;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
 .emojiDiv{
   font-size:5vh;
 }
