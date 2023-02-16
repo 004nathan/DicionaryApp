@@ -1,0 +1,140 @@
+<link href="/Css/style.css" id="displayMode" rel="stylesheet" type="text/css"/>
+<div id="root">
+ 
+    <div id="container">
+<div class="logoDiv">
+    <div class="logo">
+        <img src="/images/logo.svg"/>
+    </div>
+    <div class="changingDiv">
+        <div class="fontDiv">
+            <div class="selectBox"><label class="head">Font</label><img src="/images/icon-arrow-down.svg" class="arrow" onclick="showfont()"/></div>
+            <div class="radioDiv">
+                <div class="radio1" onclick="changeFont('sans-serif')" value="sansserif">
+                <label class="font">Sansserif</label>
+                <input type="radio" name="font" value="Sansserif" placeholder="Sansserif" class="radio" />
+            </div>
+            <div class="radio1" onclick="changeFont('serif')" value="Sansserif">
+                <label class="font">serif</label>
+                <input type="radio" name="font" value="serif" placeholder="serif" class="radio"/>
+            </div>
+            <div class="radio1" onclick="changeFont('monospace')" value="mono">
+                <label class="font">Mono</label>
+                <input type="radio" name="font" value="Mono" placeholder="Sansserif" class="radio"/>
+            </div>
+        </div>
+        </div>
+<div class="darkThemeDiv">
+    <input type="checkbox" value="true" class="inputBox" onclick="changeTheme()"/>
+    <img src="/images/icon-moon.svg"/>
+</div>
+    </div>
+</div>
+<div class="searchBarDiv">
+    <div class="searchBar">
+        <div class="searchInput">
+            <input type="text" value="" class="inputBoxSearch" />
+            <img src="/images/icon-search.svg" onclick="postMeaning()" />
+        </div>
+    </div>
+  
+</div>
+<div class="contentDiv">
+    <div class="contentContainer">
+        <% console.log(data.hasOwnProperty('word'))%>
+        <%if(data.hasOwnProperty('title')){%>
+            <%- include('./partials/response');%>
+       <% } else{%>
+        <% console.log('false')%>
+        <div class="userTextDiv">
+            <div class="textDiv">
+                <h1 class="word"><%=data[0].word%></h1>
+                <p class="phonetic"><%= data[0].phonetic%></p>
+            </div>
+            <% for(let elem of data[0].phonetics){%>
+<% console.log(elem)%>
+<% if(elem.audio != ""){%>
+    <% let audiopath = elem.audio;%>
+    <img src="/images/icon-play.svg" onclick="playSound('<%=audiopath%>')" class="playImg"/>
+    <% break%>
+<%}%>
+           <% }%>
+           
+            </div>
+            <div class="nounDiv">
+    
+            <div class="meaningDiv">
+            <h3>Meaning</h3>
+            <%= console.log(data[0].meanings[0])%>
+            <% let index = 0 %>
+            <% for(let meaning of data[0].meanings[0].definitions){%>
+                <%if(index < 5){%>
+                    <li class="li1"><%=meaning.definition%></li>
+                    <%}%>
+                <%index++;%>
+             
+                    
+            <%}%>
+    
+        
+            </div>
+            
+            </div>
+            <div class="verbDiv">
+                <% for(let meaning of data[0].meanings){%>
+            
+                    <% console.log(meaning)%>
+                    <% console.log(data[0].meanings.partOfSpeech == 'adjective' ||data[0].meanings.partOfSpeech == 'verb')%>
+                    <%if(meaning.partOfSpeech == 'adjective' ||meaning.partOfSpeech == 'verb'){%>
+                        <p class="verb"><%=meaning.partOfSpeech%></p>
+                        <h3>Meaning</h3>
+                        <li class="verbLi">
+                            <%=meaning.definitions[0].definition%>
+                        </li>
+                        <% break%>
+                    <%}%>
+                    <%}%>
+               
+           
+          
+           <div class="wikiDiv"> <p>Source</p> <a class="link" href="<%=data[0].sourceUrls[0]%>" target="_blank"><%=data[0].sourceUrls[0]%></a></div>
+            </div>
+      <% }%>
+    </div>
+</div>
+    </div>
+</div>
+<script>
+    let style = document.getElementById('displayMode');
+const playSound = (audioPath)=>{
+    console.log(audioPath);
+const audio = new Audio(audioPath);
+audio.play();
+}
+window.addEventListener('load',()=>{
+    if(localStorage.getItem('theme')){
+        changeTheme(false);
+    }
+    else{
+        changeTheme(true);
+    }
+    
+})
+let theme = true;
+const changeTheme = ()=>{
+   console.log(theme)
+   if(theme){
+    console.log(true)
+    style.attributes.href.value='/Css/style2.css';
+    theme=false;
+    localStorage.setItem('theme',theme)
+   }
+   else{
+    console.log(false)
+    style.attributes.href.value='/Css/style.css'
+    theme=true;
+    localStorage.setItem('theme',theme)
+   }
+}
+</script>
+<script src="/Js/index.js"></script>

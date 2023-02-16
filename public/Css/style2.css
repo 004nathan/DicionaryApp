@@ -1,0 +1,251 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #000000;
+    font-family:sans-serif;
+    letter-spacing: 0.1vh;
+}
+#root{
+   height:100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   background-color: #050505;
+   /* background-color: rgb(44, 112, 172); */
+}
+#container{
+    height:90vh;
+    width:50vw;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+}
+.logoDiv{
+    height:10vh;
+    width:50vw;
+    display: flex;
+    flex-direction: row;
+}
+.changingDiv{
+    height:10vh;
+    width:15vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.radioDiv{
+    display:none;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+}
+.radioDiv .radio1{
+    position:relative;
+    height:2vh;
+    width: 5vw;
+    color:rgb(252, 249, 249);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction:column;
+    /* border:0.01vh solid #ffff; */
+    background-color: #1F1F1F;
+box-shadow: 0vh 0.5vh 1vh #A445ED;
+cursor: pointer;
+}
+.font{
+    cursor: pointer;
+}
+.logo{
+    height:10vh;
+    width:35vw;
+    margin-top:2vh;
+}
+.fontDiv{
+    height:5vh;
+    width:8vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.darkThemeDiv{
+    height:5vh;
+    width:8vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.searchBarDiv{
+    height:10vh;
+    width:50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.searchInput{
+    height:5vh;
+    width: 35vw;
+    background-color: #1F1F1F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    border-radius:1vh;
+}
+.searchInput img{
+    height:2.4vh;
+   margin-left: -3vh;
+   cursor: pointer;
+}
+.inputBoxSearch{
+    height:5vh;
+    width: 35vw;
+    background-color: #1F1F1F;
+    border: none;
+    font-size: 2vh;
+    color: #fff;
+}
+.contentDiv{
+    height:70vh;
+    width:50vw;
+    display: flex;
+    justify-content:center;
+  align-items:flex-start;
+}
+.userTextDiv{
+    /* height:15vh; */
+    width: 35vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+/* .playImg{
+margin-top:-2vh;
+height:6vh;
+cu
+} */
+.textDiv{
+    /* height:10vh; */
+    width: 30vw;
+    font-size:2vh;
+   
+}
+.nounDiv{
+    /* height:25vh; */
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+}
+.verbDiv{
+    /* height:10vh; */
+    width: 35vw;
+}
+.contentContainer{
+    height:40vh;
+    width: 35vw;
+    /* background-color: rgb(152, 154, 161); */
+   display:flex;
+   justify-content:flex-start;
+   align-items: center;
+   flex-direction: column;
+}
+.inputBox{
+    position: relative;
+    width:3vw;
+    height:2.5vh;
+    background-color:#A445ED;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius:2vh;
+    transition: .5s;
+  }
+  .verb{
+    font-size: 2vh;
+}
+  .inputBox::before{
+content:'';
+position: absolute;
+width:1vw;
+height:2vh;
+border-radius:1vh;
+top: 2;
+left: 2;
+background-color: #fff;
+transition:.5s;
+transform: scale(1.1);
+cursor: pointer;
+}
+.playImg{
+    cursor: pointer;
+}
+.arrow{
+    cursor: pointer;
+}
+  input:checked[type='checkBox']::before{
+    left:1.7vw;
+  }
+  .selectBox{
+    margin-top:1.5vh;
+    display: flex;
+    gap:2vw;
+  }
+  li,h1,b,h3,p,label{
+    color: #fff;
+
+  }
+  li{
+    font-size: 2vh;
+  }
+  h3{
+    font-size: 2vh;
+    color:#757575
+  }
+  label{
+    color: rgb(253, 251, 251);
+  }
+  .phonetic{
+    color:#A445ED;
+  }
+  a{
+    color:#A445ED;
+    text-decoration: none;
+  }
+  .radio{
+    display: none;
+}
+.head{
+    color: #fff;
+}
+.emoji{
+   height:5vh;
+   width:37vw;
+   font-size: 2vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.emojiDiv{
+  font-size:5vh;
+}
+.wikiDiv{
+    /* height: 2vh; */
+    width: 35vw;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+    flex-direction: row;
+    font-size: 2vh;
+}
+.meaningDiv{
+    /* height:30vh; */
+    width: 35vw;
+}
