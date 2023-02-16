@@ -55,6 +55,16 @@ body{
 box-shadow: 0vh 0.5vh 1vh #A445ED;
 cursor: pointer;
 }
+.playImg{
+    cursor: pointer;
+    height: 7vh;
+}
+.logoImg{
+    height: 5vh;
+}
+.moonimg{
+    height: 3vh;
+}
 .font{
     cursor: pointer;
 }
@@ -174,8 +184,8 @@ position: absolute;
 width:1vw;
 height:2vh;
 border-radius:1vh;
-top: 2;
-left: 2;
+top:0.3vh;
+left:0.1vw;
 background-color: #fff;
 transition:.5s;
 transform: scale(1.1);
@@ -186,13 +196,17 @@ cursor: pointer;
 }
 .arrow{
     cursor: pointer;
+    height: 1.3vh;
 }
   input:checked[type='checkBox']::before{
+    top:0vh;
     left:1.7vw;
   }
   .selectBox{
     margin-top:1.5vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap:2vw;
   }
   li,h1,b,h3,p,label{
@@ -221,15 +235,20 @@ cursor: pointer;
 }
 .head{
     color: #fff;
+    font-size: 2vh;
 }
 .emoji{
    height:5vh;
-   width:37vw;
+   width:40vw;
    font-size: 2vh;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   margin-top: 15vh;
+}
+.font{
+    font-size:1.5vh;
 }
 .emojiDiv{
   font-size:5vh;

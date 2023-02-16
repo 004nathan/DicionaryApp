@@ -59,6 +59,9 @@ body{
     width:35vw;
     margin-top:2vh;
 }
+.font{
+    font-size:1.5vh;
+}
 .fontDiv{
     height:5vh;
     width:8vw;
@@ -92,16 +95,27 @@ body{
     align-items:center;
     border-radius:1vh;
 }
+.moonimg{
+    height: 3vh;
+}
+.logoImg{
+    height: 5vh;
+}
 .searchInput img{
    height:2.4vh;
    margin-left: -3vh;
    cursor:pointer;
 }
+.head{
+    font-size: 2vh;
+}
 .playImg{
     cursor: pointer;
+    height: 7vh;
 }
 .arrow{
     cursor: pointer;
+    height: 1.3vh;
 }
 .inputBoxSearch{
     height:5vh;
@@ -124,10 +138,7 @@ body{
     align-items: center;
     flex-direction: row;
 }
-/* .playImg{
-margin-top:-2vh;
-height:6vh;
-} */
+
 .textDiv{
     /* height:10vh; */
     width: 30vw;
@@ -168,19 +179,22 @@ position: absolute;
 width:1vw;
 height:2vh;
 border-radius:1vh;
-top: 2;
-left: 2;
+top:0.3vh;
+left:0.1vw;
 background-color: #fff;
 transition:.5s;
 transform: scale(1.1);
 cursor: pointer;
 }
   input:checked[type='checkBox']::before{
+    top:0vh;
     left:1.7vw;
   }
   .selectBox{
     margin-top:1.5vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap:2vw;
   }
   li{
@@ -202,12 +216,13 @@ cursor: pointer;
 }
 .emoji{
    height:5vh;
-   width:37vw;
+   width:40vw;
    font-size: 2vh;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   margin-top: 15vh;
 }
 .emojiDiv{
   font-size:5vh;
